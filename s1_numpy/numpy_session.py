@@ -1,7 +1,8 @@
+"""
 # *********************************************************
 # COURSE 14 SESSION 01
 # *********************************************************
-"""
+
 HOW TO LOAD DATA: LOCAL VS REMOTE
 """
 import numpy as np
@@ -20,7 +21,12 @@ print(type(datos))
 """
 ARRAYS ADVANTAGES
 
-Las listas en Python son estructuras de datos básicas que pueden contener elementos de diferentes tipos (enteros, cadenas, otras listas, etc.). Por otro lado, Numpy (Numerical Python) es una biblioteca de Python que proporciona soporte para matrices multidimensionales, estructuras de datos más avanzadas y eficientes para cálculos numéricos.
+Las listas en Python son estructuras de datos básicas que pueden
+    contener elementos de diferentes tipos (enteros, cadenas, otras
+    listas, etc.). Por otro lado, Numpy (Numerical Python) es una 
+    biblioteca de Python que proporciona soporte para matrices 
+    multidimensionales, estructuras de datos más avanzadas y 
+    eficientes para cálculos numéricos.
 
 Aquí tienes un ejemplo de cómo convertir una lista en un array Numpy:
 """
@@ -42,17 +48,30 @@ print("Array: ", array)
 # Array: [1 2 3 4 5]
 
 """
-Existen varias ventajas en el uso de arrays Numpy en lugar de listas regulares de Python y aquí tienes algunas de ellas:
+Existen varias ventajas en el uso de arrays Numpy en lugar de listas
+    regulares de Python y aquí tienes algunas de ellas:
 
-1. Eficiencia de procesamiento: Las operaciones matemáticas en los arrays Numpy son mucho más rápidas que en las listas regulares, ya que Numpy está optimizado para trabajar con conjuntos de datos homogéneos y libera memoria de la computadora de manera rápida.
+        1. Eficiencia de procesamiento: Las operaciones matemáticas en
+            los arrays Numpy son mucho más rápidas que en las listas
+            regulares, ya que Numpy está optimizado para trabajar con
+            conjuntos de datos homogéneos y libera memoria de la
+            computadora de manera rápida.
 
-2. Facilidad de uso: Las operaciones matemáticas en los arrays Numpy se expresan de manera mucho más clara y concisa que en las listas regulares, lo que hace que el código sea más fácil de leer y mantener.
+        2. Facilidad de uso: Las operaciones matemáticas en los arrays
+            Numpy se expresan de manera mucho más clara y concisa que
+            en las listas regulares, lo que hace que el código sea más
+            fácil de leer y mantener.
 
-3. Integración con otras bibliotecas: Numpy es una de las bibliotecas más utilizadas en ciencia de datos y aprendizaje automático. Muchas otras bibliotecas, como Pandas y Matplotlib, están diseñadas para trabajar directamente con arrays Numpy.
+        3. Integración con otras bibliotecas: Numpy es una de las
+            bibliotecas más utilizadas en ciencia de datos y
+            aprendizaje automático. Muchas otras bibliotecas, como
+            Pandas y Matplotlib, están diseñadas para trabajar
+            directamente con arrays Numpy.
 
 Comparación de rendimiento: listas vs arrays
 
-Centrándonos en la eficiencia, podemos comparar el tiempo necesario para realizar un cálculo utilizando listas y arrays.
+Centrándonos en la eficiencia, podemos comparar el tiempo necesario
+    para realizar un cálculo utilizando listas y arrays.
 """
 print("\n\n")
 # import numpy as np
@@ -91,6 +110,39 @@ print("Tiempo de la operación con el array: ", tiempo_array)
 # Tiempo de la operación con el array: 0.004081010818481445
 
 """
-Como se puede ver, la operación realizada con el array Numpy fue mucho más rápida que con la lista regular, lo que demuestra la eficiencia en el procesamiento con el array.
+Como se puede ver, la operación realizada con el array Numpy fue mucho
+    más rápida que con la lista regular, lo que demuestra la eficiencia
+    en el procesamiento con el array.
 """
 
+"""
+NumPy: Análisis numérico eficiente con Python
+
+NumPy es una biblioteca de Python que ofrece diversas herramientas y
+    funcionalidades esenciales para la computación científica,
+    incluyendo objetos de matriz multidimensional conocidos como
+    arrays, rutinas para operaciones rápidas en matrizes, además de
+    operaciones matemáticas, manipulación de formas, estadística entre
+    otros. Es ampliamente utilizada en áreas como análisis de datos,
+    procesamiento de señales y aprendizaje de máquina.
+
+Para acceder a la documentación de esta biblioteca, puedes hacer clic
+    en el siguiente enlace: https://numpy.org/devdocs/index.html
+"""
+print(f"Dimensiones: {datos.ndim}")
+
+print(f"Forma: {datos.shape}")
+
+datos_transpuestos = datos.T
+print(f"Transpose: {datos_transpuestos}")
+
+"""
+Mini ejercicio: Obteniendo las dimensiones
+
+Documentación de loattxt()
+    https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html
+"""
+urlito = "https://raw.githubusercontent.com/allanspadini/numpy/dados/bytebank.csv"
+
+data = np.loadtxt(urlito, delimiter=',', skiprows=1, dtype=float)
+print(f"Tamaño de la data bytebank: {data.shape}")
