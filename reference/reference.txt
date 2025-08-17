@@ -1,0 +1,8 @@
+Initial notebook
+https://github.com/alura-es-cursos/2044-numpy-analisis-numerico-eficiente-con-python/blob/main/Numpy.ipynb
+
+Data file
+https://cdn3.gnarususercontent.com.br/2044-numpy-analisis-numerico-eficiente-con-python/manzanas.csv
+
+Loading data URL 
+https://gist.githubusercontent.com/ahcamachod/41b8a65c5e5b58125401deafb68af460/raw/f84320f69efa1cc3e86e1db054422cfa4869c63e/manzanas.csv

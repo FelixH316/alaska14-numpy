@@ -1,4 +1,4 @@
-# Data Base Modeling: Entities, relations and attributes by Felix A
+# NumPy: Efficient numerical analysis with python by Felix A
 
 ## Description
 This is a simple game to find your secret friend. This game is a challenge from the Oracle Next Education Program ONE G8.
